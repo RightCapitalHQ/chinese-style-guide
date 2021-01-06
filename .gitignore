@@ -1,0 +1,6 @@
+/.idea
+*.bak
+*.swap
+*.swp
+*.tmp
+.DS_Store
