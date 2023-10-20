@@ -1,0 +1,23 @@
+name: Lint
+on:
+    push:
+        branches: [main, feature/**]
+    pull_request:
+        branches: [main]
+
+jobs:
+    markdownlint:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: Prepare Node.js
+              uses: actions/setup-node@v3.8.1
+              with:
+                  node-version-file: .node-version
+
+            - name: Install deps
+              run: npm install -g markdownlint-cli
+
+            - name: Lint the markdown file
+              run: markdownlint 'README.md'
