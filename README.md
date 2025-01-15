@@ -464,7 +464,7 @@
 
     > Iphone 在短短数年内就挑战了 blackberry 在企业市场中的地位。
 
-1. 文章的标题（title）、出版物名称（包括书籍、音乐和影视作品等）应该使用标题大小写（title case），而非句子大小写（sentence case）。标题大小写可以使用[这个](https://headlinecapitalization.com)工具。
+1. 文章的标题（title）、出版物名称（包括书籍、音乐和影视作品等）应该使用标题大小写（title case），而非句子大小写（sentence case）。
 1. 章节的标题（heading）、表格和图表的标题、表格的表头应使用句子大小写。
 1. 在条目列表中，当条目都是包含动词的完整句子时，所有条目的第一个单词的首字母都应该大写。
 
