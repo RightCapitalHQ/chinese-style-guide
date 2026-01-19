@@ -1,0 +1,14 @@
+{
+  "name": "chinese-style-guide",
+  "version": "1.0.0",
+  "description": "中文写作排版风格指南 - 提供中文文档格式和排版修正指导",
+  "author": {
+    "name": "RightCapital",
+    "url": "https://github.com/RightCapitalHQ"
+  },
+  "homepage": "https://github.com/RightCapitalHQ/chinese-style-guide",
+  "repository": "https://github.com/RightCapitalHQ/chinese-style-guide",
+  "license": "MIT",
+  "keywords": ["chinese", "style-guide", "formatting", "typography", "中文", "排版"],
+  "skills": ["./../.claude/skills/"]
+}
