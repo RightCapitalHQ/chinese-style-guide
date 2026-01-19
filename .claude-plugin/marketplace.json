@@ -1,6 +1,6 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "RightCapitalHQ-chinese-style-guide",
+  "name": "rightcapital-chinese-style-guide",
   "version": "1.0.0",
   "description": "中文写作排版风格指南 - 提供中文文档格式和排版修正指导",
   "owner": {
