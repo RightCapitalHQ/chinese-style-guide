@@ -168,6 +168,29 @@ description: This skill should be used when the user asks to "写文档", "撰�
 
 ## 附加资源
 
+### 自动检查脚本
+
+使用 Python 脚本自动检查格式问题：
+
+```bash
+python .claude/skills/chinese-style-guide/scripts/check_format.py <file.md>
+
+# 选项
+--skip-tables     跳过 Markdown 表格行
+--warnings-only   只显示警告，不返回错误退出码
+```
+
+**脚本检查项**：
+1. 中英文之间缺少空格
+2. 中文与数字之间缺少空格
+3. 半角标点在中文句子中
+4. 直引号替代弯引号
+5. 省略号 `...` 替代 `……`
+6. 破折号 `--` 替代 `——`
+7. 时间使用全角冒号
+8. 书名号/括号内多余空格
+9. 大数字缺少千位分隔符
+
 ### 参考文件
 
 详细规则和完整示例请查阅：

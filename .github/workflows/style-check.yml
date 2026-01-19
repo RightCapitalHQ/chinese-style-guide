@@ -1,0 +1,44 @@
+name: Chinese Style Check
+
+on:
+  push:
+    branches: [main, feature/**]
+    paths:
+      - "**.md"
+      - ".github/workflows/style-check.yml"
+      - ".claude/skills/chinese-style-guide/scripts/**"
+  pull_request:
+    branches: [main]
+    paths:
+      - "**.md"
+      - ".github/workflows/style-check.yml"
+      - ".claude/skills/chinese-style-guide/scripts/**"
+
+jobs:
+  style-check:
+    name: Check Chinese formatting
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run style checker
+        run: |
+          # Find all markdown files except README.md (which contains intentional error examples)
+          # and run the style checker on them
+          find . -name "*.md" \
+            -not -path "./.git/*" \
+            -not -path "./node_modules/*" \
+            -not -name "README.md" \
+            -type f \
+            -print0 | xargs -0 -r python .claude/skills/chinese-style-guide/scripts/check_format.py --skip-tables || true
+
+          # For README.md, run in warnings-only mode (it contains intentional error examples)
+          echo ""
+          echo "Checking README.md (warnings only - contains intentional error examples)..."
+          python .claude/skills/chinese-style-guide/scripts/check_format.py --skip-tables --warnings-only README.md
