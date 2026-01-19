@@ -10,5 +10,5 @@
   "repository": "https://github.com/RightCapitalHQ/chinese-style-guide",
   "license": "MIT",
   "keywords": ["chinese", "style-guide", "formatting", "typography", "中文", "排版"],
-  "skills": ["./../.claude/skills/"]
+  "skills": ["./.claude/skills/"]
 }
