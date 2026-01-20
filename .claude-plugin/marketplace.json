@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "rightcapital-chinese-style-guide",
+  "version": "1.0.0",
+  "description": "中文写作排版风格指南 - 提供中文文档格式和排版修正指导",
+  "owner": {
+    "name": "RightCapital"
+  },
+  "plugins": [
+    {
+      "name": "chinese-style-guide",
+      "source": "./",
+      "description": "中文写作排版风格指南 - 提供中文文档格式和排版修正指导",
+      "version": "1.0.0",
+      "category": "writing"
+    }
+  ]
+}

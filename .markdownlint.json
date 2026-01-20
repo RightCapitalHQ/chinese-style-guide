@@ -1,6 +1,7 @@
 {
     "line-length": false,
     "no-alt-text": false,
+    "table-column-style": false,
     "headings": {
         "siblings_only": true
     },
