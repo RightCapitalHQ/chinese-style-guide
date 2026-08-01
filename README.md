@@ -436,11 +436,11 @@
 
     正确
 
-    > Color, grey, center, canceled
+    > Color, gray, center, canceled
 
     错误
 
-    > Colour, gray, centre, cancelled
+    > Colour, grey, centre, cancelled
 
 1. 商标和品牌名应该遵循其官方拼写。
 
@@ -532,13 +532,13 @@
 
     > The company’s name is RightCapital Inc.
     >
-    > There are apples, oranges, etcs.
+    > There are apples, oranges, etc.
 
     错误
 
     > The company’s name is RightCapital Inc..
     >
-    > There are apples, oranges, etcs..
+    > There are apples, oranges, etc..
 
 1. 括号的外侧需要保留一个空格。
 
