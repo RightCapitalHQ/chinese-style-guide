@@ -228,9 +228,9 @@
 
 1. 使用美式英语拼写。
 
-   正确：Color, grey, center, canceled
+   正确：Color, gray, center, canceled
 
-   错误：Colour, gray, centre, cancelled
+   错误：Colour, grey, centre, cancelled
 
 2. 商标和品牌名应该遵循其官方拼写。
 
