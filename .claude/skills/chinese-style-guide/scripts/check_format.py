@@ -82,9 +82,12 @@ class StyleChecker:
 
             # 跳过行内代码的部分
             line_to_check = self._remove_inline_code(line)
+            # 书名号内是出版物/作品名称，内部排版遵循官方写法，
+            # 不做「汉字与数字/英文之间加空格」的强制检查。
+            line_for_spacing = self._mask_book_titles(line_to_check)
 
-            self._check_space_cn_en(line_num, line, line_to_check)
-            self._check_space_cn_num(line_num, line, line_to_check)
+            self._check_space_cn_en(line_num, line, line_for_spacing)
+            self._check_space_cn_num(line_num, line, line_for_spacing)
             self._check_halfwidth_punctuation(line_num, line, line_to_check)
             self._check_straight_quotes(line_num, line, line_to_check)
             self._check_ellipsis(line_num, line, line_to_check)
@@ -102,6 +105,16 @@ class StyleChecker:
         # 处理 ` 单反引号
         line = re.sub(r"`[^`]+`", lambda m: " " * len(m.group()), line)
         return line
+
+    def _mask_book_titles(self, line: str) -> str:
+        """将书名号《》内的内容替换为空格（保持长度不变）。
+
+        书名号内是出版物/作品名称（如《泰坦陨落2》《The Hitchhiker's
+        Guide to the Galaxy》），其中嵌入的阿拉伯数字或英文属于官方
+        标题的一部分，不应被强制加空格，因此对这些内容不参与
+        「汉字与数字/英文之间加空格」的检查。
+        """
+        return re.sub(r"《[^》]*》", lambda m: " " * len(m.group()), line)
 
     def _check_space_cn_en(self, line_num: int, orig_line: str, line: str):
         """检查中英文之间是否有空格"""

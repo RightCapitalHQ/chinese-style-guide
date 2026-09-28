@@ -50,6 +50,7 @@ description: This skill should be used when the user asks to "写文档", "撰�
 | 汉字与英文之间 | 添加空格 | `这是 English 文本` |
 | 汉字与数字之间 | 添加空格 | `共 100 个` |
 | 汉字标点与英文之间 | 不加空格 | `在《Book》中` |
+| 书名号内（官方标题） | 不加空格 | `《泰坦陨落2》` |
 | 汉字与半角标点之间 | 不加空格 | `100 美元/月` |
 | 格式化内容与汉字之间 | 不加空格 | `这是**重点**内容` |
 
@@ -126,6 +127,8 @@ description: This skill should be used when the user asks to "写文档", "撰�
 + 在《Book》中
 ```
 
+注意：书名号《》内是出版物/作品名称（如《泰坦陨落2》《辐射4》），其内部排版遵循官方写法，不强制在汉字与数字/英文之间添加空格。
+
 ### 标点问题
 
 ```diff
@@ -190,6 +193,8 @@ python .claude/skills/chinese-style-guide/scripts/check_format.py <file.md>
 7. 时间使用全角冒号
 8. 书名号/括号内多余空格
 9. 大数字缺少千位分隔符
+
+注：书名号《》内为作品名称，不参与第 1、2 项（中英文/中文与数字之间空格）检查。
 
 ### 参考文件
 
